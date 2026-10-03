@@ -63,10 +63,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'regis
         <p>Create your account</p>
     </div>
 
-    <ul class="nav nav-tabs mb-3" role="tablist">
-        <li class="nav-item"><a class="nav-link" href="login.php"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-        <li class="nav-item"><a class="nav-link active" href="register.php"><i class="fas fa-user-plus"></i> Create Account</a></li>
-    </ul>
+<div class="text-center mb-4">
+    <small class="text-muted">
+        Already have an account? 
+        <a href="login.php" class="forgot-link">Login</a>
+    </small>
+</div>
 
     <?php if (!empty($field_errors['general'])): ?>
         <div class="alert alert-danger alert-dismissible fade show">
